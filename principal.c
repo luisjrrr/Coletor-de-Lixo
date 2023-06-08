@@ -4,18 +4,19 @@
 
 int main()
 {
-    int *v = (int*)malloc2(sizeof(int)); // Corrigido: casting para int*
+    int *v = (int*)malloc2(sizeof(int));
     *v = 10;
-    int *w = (int*)malloc2(sizeof(int)); // Corrigido: casting para int*
+    int *w = (int*)malloc2(sizeof(int));
     dump();
     *w = 20;
-    atrib2((void**)&v, w); // Corrigido: casting para (void**)
+    atrib2((void**)&v, w);
     dump();
-    char *c = (char*)malloc2(sizeof(char)); // Corrigido: casting para char*
+    char *c = (char*)malloc2(sizeof(char));
     *c = 'Z';
     dump();
-    atrib2((void**)&w, NULL); // Corrigido: casting para (void**)
-    atrib2((void**)&v, NULL); // Corrigido: casting para (void**)
+    atrib2((void**)&w, NULL);
+    dump();
+    atrib2((void**)&v, NULL);
     dump();
     return 0;
 }
