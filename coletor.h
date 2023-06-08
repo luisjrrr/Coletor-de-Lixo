@@ -11,6 +11,6 @@ typedef struct heap
 void *malloc2(int tam);
 void coletor();
 void atrib2(void **endereco1, void *endereco2);
-void dump(); // Corrigido: remover parâmetro
+void dump(); 
 
 #endif
