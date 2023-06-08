@@ -16,7 +16,7 @@ void *malloc2(int tamanho)
     {
         h->prox = hp;
     }
-    hp = h; // Corrigido: atribuição de 'h' ao invés de 'hp'
+    hp = h;
     return hp->endereco;
 }
 
@@ -30,7 +30,7 @@ void coletor()
     while (aux && aux->contador == 0)
     {
         hp = aux->prox;
-        free(aux->endereco); // Corrigido: liberar o endereço de memória alocado
+        free(aux->endereco);
         free(aux);
         aux = hp;
     }
@@ -45,7 +45,7 @@ void coletor()
         else
         {
             b->prox = aux->prox;
-            free(aux->endereco); // Corrigido: liberar o endereço de memória alocado
+            free(aux->endereco);
             free(aux);
             aux = b->prox;
         }
@@ -75,7 +75,7 @@ void atrib2(void **endereco1, void *endereco2)
     *endereco1 = endereco2;
 }
 
-void dump() // Corrigido: remover o parâmetro Heap *hp
+void dump()
 {
     Heap *aux = hp;
     while (aux != NULL)
